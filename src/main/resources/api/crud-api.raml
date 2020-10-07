@@ -1,0 +1,104 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/01982652-138d-4295-b7d9-3eb90a7fcd59/ # 
+title: CRUD API
+/hr: 
+ /employees:
+     get:
+       responses:
+         200:
+           body:
+             application/json:
+                example: 
+                 { 
+                   "count":2,
+                   "entries":
+                   [
+                      {
+                      "employeeId" : 1243,
+                      "role": Developer,
+                      "Name": shruti,
+                      "Age": 25,
+                      "HomeAddress": 123 main st apt 12 Memphis 38103,
+                      "Phone": 1234567890
+                      },
+                        {
+                      "employeeId" : 1243,
+                      "role": Developer,
+                      "Name": shruti,
+                      "Age": 25,
+                      "HomeAddress": 123 main st apt 12 Memphis 38103,
+                      "Phone": 1234567890
+                      }                    
+                    ]
+                 }                       
+     post:
+       body: 
+         application/json:
+             example:
+                  {
+                      "role": Developer,
+                      "Name": shruti,
+                      "Age": 25,
+                      "HomeAddress": 123 main st apt 12 Memphis 38103,
+                      "Phone": 1234567890
+                  }               
+       responses:
+         201:
+           body:
+             application/json:
+               example:
+                  {
+                      "employeeId" : 1243,
+                      "role": Developer,
+                      "Name": shruti,
+                      "Age": 25,
+                      "HomeAddress": 123 main st apt 12 Memphis 38103,
+                      "Phone": 1234567890
+                  }         
+     /{ID}:
+       get:
+         responses:
+           200:
+             body:
+               application/json:
+                   examples: 
+                        { 
+                          "employeeId" :12435,
+                           "role": "Developer",
+                           "Name":"Riddhi",
+                           "Age": 25 ,
+                          "HomeAddress": "11 main st apt 11 Memphis 38103",
+                          "Phone": 1234567897
+                          }                 
+       delete:
+        responses:
+         200:
+          body:
+            application/json:
+              example:
+                message: Deleted 
+       put:
+         body:
+          application/json:
+              examples:
+                  {
+                      "employeeId" : 12435,
+                      "role": "Developer",
+                      "Name": "Riddhi",
+                      "Age": 25,
+                      "HomeAddress": "11 main st apt 11 Memphis 38103",
+                      "Phone": 1234567897
+                  }       
+         responses:
+          200:
+            body:
+             application/json:
+              example:
+                 {
+                      "employeeId" : 12435,
+                      "role": "Developer",
+                      "Name": "Riddhi1",
+                      "Age": 251,
+                      "HomeAddress": "11 main st apt 11 Memphis 38103",
+                      "Phone": 1234567897 
+                 }              

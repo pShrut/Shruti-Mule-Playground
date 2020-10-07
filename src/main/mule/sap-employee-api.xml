@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="get-employee-from-SAP" doc:id="687f637c-6859-4d13-ab9a-e55ccdaf5d49" >
+		<ee:transform doc:name="Transform Message" doc:id="9f5f1176-9477-4044-af2e-486a1c19f627" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+    "count": 4,
+    "entries": [
+        {
+            "role": "Developer",
+            "Phone": "9876543210",
+            "HomeAddress": "13 main st apt 11 Memphis 38103",
+            "Name": "Sam",
+            "employeeId": 189834,
+            "Age": 25,
+            "System": "SAP"
+        },
+        {
+            "role": "Developer",
+            "Phone": "9876543210",
+            "HomeAddress": "13 main st apt 11 Memphis 38103",
+            "Name": "Sam",
+            "employeeId": 44545,
+            "Age": 25,
+            "System": "SAP"
+        },
+        {
+            "role": "Architech",
+            "Phone": "9876543210",
+            "HomeAddress": "15 beal st apt 11 Memphis 38103",
+            "Name": "Sam",
+            "employeeId": 645454,
+            "Age": 25,
+            "System": "SAP"
+        },
+        {
+            "role": "Developer",
+            "Phone": "9876543210",
+            "HomeAddress": "13 main st apt 11 Memphis 38103",
+            "Name": "Sam",
+            "employeeId": 745545,
+            "Age": 25,
+            "System": "SAP"
+        },
+        {
+            "role": "Developer",
+            "Phone": "9876543210",
+            "HomeAddress": "13 main st apt 11 Memphis 38103",
+            "Name": "Sam",
+            "employeeId": 83748,
+            "Age": 25,
+            "System": "SAP"
+        }        
+        
+    ]
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
