@@ -1,5 +1,5 @@
 ## Introduction 
-This is my first mulesoft project after I completed MuleSoft developer training. I can be reached at : <EMAIL_ADDRESS>
+This is my first mulesoft project after I completed MuleSoft developer training. I can be reached at : <pshruti004@gmail.com>
 
 Details of endpoints and how to call them call be found in API RAMP file at : Shruti-Mule-Playground raml ..<Create link>
 
